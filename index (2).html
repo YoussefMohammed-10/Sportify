@@ -1,0 +1,316 @@
+<html>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Sportify</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #dedede;
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+      height: 100vh;
+      direction: ltr;
+    }
+
+    .left-container {
+      width: 50%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #dedede;
+    }
+
+    .left-container img {
+      max-width: 90%;
+      height: auto;
+    }
+
+    .joo {
+      background-color: #ffffff;
+      padding: 30px;
+      width: 500px;
+      max-width: 90%;
+      border-radius: 15px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .logo {
+      display: grid;
+      grid-template-columns: repeat(2, 30px);
+      gap: 5px;
+      margin-bottom: 30px;
+    }
+
+    .square {
+      width: 30px;
+      height: 50px;
+      border-radius: 10px;
+    }
+
+    .blue {
+      background-color: #007bff;
+    }
+
+    .gray {
+      background-color: #4a4a4a;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .input-group label {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .input-group input {
+      border: none;
+      border-bottom: 1px solid #333;
+      padding: 10px;
+      font-size: 18px;
+      outline: none;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #333;
+      margin: 15px 0;
+    }
+
+    button {
+      background-color: #121212;
+      color: white;
+      font-size: 18px;
+      border: none;
+      padding: 12px 50px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px;
+        height: auto;
+      }
+
+      .left-container {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      .left-container img {
+        max-width: 80%;
+        height: auto;
+      }
+
+      .joo {
+        width: 90%;
+        align-items: center;
+        text-align: center;
+      }
+
+      .input-group {
+        text-align: left;
+      }
+
+      .input-group input {
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+      }
+    }
+    .joo {
+  background-color: #ffffff;
+  padding: 40px;
+  width: 600px;
+  max-width: 95%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.input-group label {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  padding: 15px;
+  font-size: 20px;
+  border-bottom: 2px solid #333;
+}
+
+.remember-me {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+button {
+  font-size: 22px;
+  padding: 15px 80px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .joo {
+    width: 95%;
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .input-group label,
+  .input-group input,
+  .remember-me {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 14px 60px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="left-container">
+    <img src="image/login.png" alt="Login Image">
+  </div>
+
+  <div class="joo">
+    <div class="logo">
+      <div class="square blue"></div>
+      <div class="square gray"></div>
+      <div class="square gray"></div>
+      <div class="square blue"></div>
+    </div>
+
+    <h2>Login</h2>
+
+    <form id="loginForm">
+        <div class="input-group">
+          <label for="username"></label>
+          <input type="text" id="username" placeholder="Enter your username" required>
+        </div>
+      
+        <div class="input-group">
+          <label for="Email"></label>
+          <input type="email" id="Email" placeholder="Enter your Email" required>
+        </div>
+      
+        <div class="input-group">
+          <label for="password"></label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+      
+        <div class="remember-me">
+          <input type="checkbox" id="remember">
+          <label for="remember">Remember me</label>
+        </div>
+      
+        <button type="submit">Login</button>
+      </form>
+      
+      <!-- ✅ JavaScript للتأكد -->
+      <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+      
+          const username = document.getElementById("username").value.trim();
+          const email = document.getElementById("Email").value.trim();
+          const password = document.getElementById("password").value.trim();
+          const remember = document.getElementById("remember").checked;
+      
+          if (!username || !email || !password) {
+            alert("Please fill in all fields.");
+            return;
+          }
+      
+          if (!remember) {
+            alert("Please check the 'Remember me' box.");
+            return;
+          }
+      
+          // ✅ رسالة ترحيب ثم Reload للصفحة
+          alert("✅ Welcome " + username + "!");
+          location.reload(); // يعمل refresh بعد ما المستخدم يضغط OK
+        });
+      </script>
+        
+</body>
+</html>
